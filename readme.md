@@ -51,13 +51,17 @@ This contract provides a basic structure for a token system, where tokens can be
 
 ## Getting Started
 
-### Executing program
 
-To execute the provided Solidity code on Remix IDE with user inputs, you can follow these steps:
+## Installing 
+
+To instal the provided Solidity code on Remix IDE with user inputs, you can follow these steps:
 
 Open Remix IDE: Go to the Remix IDE website (https://remix.ethereum.org/).
 
 Create a New File: On the Remix IDE interface, create a new Solidity file and paste the provided code into it. You can click on the "+" button in the file explorer on the left side and give the file a name, such as "SachinToken.sol."
+
+
+### Executing program
 
 Compile the Contract:
 
@@ -68,6 +72,10 @@ Deploy the Contract:
 
 After successful compilation, go to the "Deploy & Run Transactions" tab in Remix IDE.
 In the "Environment" dropdown, select "Injected Web3" if you have a MetaMask wallet or any other Ethereum wallet extension installed. This will allow you to deploy the contract using your Ethereum account.
+
+
+### Deploy
+
 Deploy the Contract:
 
 Below the contract code, you should see a section to deploy the contract.
@@ -80,7 +88,45 @@ Enter the Ethereum address and the amount of tokens you want to mint or burn in 
 Click the "Transact" button to execute the function.
 Check Contract State:
 
-You can also check the state of the contract, including the totalSupply and balances of different addresses, by calling the public variables and functions. These will be read-only transactions and do not require gas.
+You can also check the state of the contract, including the totalSupply and balances of different addresses, by calling the public variables and functions. These will be read-only transactions and do not require gas
+
+### User Input
+
+Input Values for Minting:
+
+
+In the "mintTokens" section, you will see two input fields:
+_address: Enter the Ethereum address to which you want to mint tokens. This should be a valid Ethereum address 
+_amount: Enter the number of tokens you want to mint.
+
+
+Execute the Mint Function:
+
+After entering the values,
+click the "Transact" button to execute the minting function. 
+
+
+Check Token Balance:
+
+To check the updated balance of the address you minted tokens to, you can call the balances mapping using the address as the key. You can do this by entering the address in the "balances" section under your contract and clicking the "Read" button.
+
+
+Burn Tokens:
+
+Similarly, you can burn tokens by calling the burnTokens function.
+In the "Deployed Contracts" section, find the "burnTokens" function in the list of functions under your contract.
+Input Values for Burning:
+
+In the "burnTokens" section, you will see two input fields:
+_address: Enter the Ethereum address that holds the tokens you want to burn.
+_amount: Enter the number of tokens you want to burn.
+Execute the Burn Function:
+
+After entering the values, click the "Transact" button to execute the burning function. Ensure that you have enough tokens in the specified address to burn; otherwise, it will fail.
+Check Token Balance After Burning:
+
+You can also check the updated balance of the address after burning tokens by calling the balances mapping as mentioned in step 5.
+
 
 ## Authors
 
